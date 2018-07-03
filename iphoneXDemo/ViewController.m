@@ -1,5 +1,12 @@
-# iphoneXDemo
+//
+//  ViewController.m
+//  iphoneXDemo
+//
+//  Created by MacOS on 2018/7/3.
+//  Copyright © 2018年 MacOS. All rights reserved.
+//
 
+#import "ViewController.h"
 
 //一.iPhone X尺寸问题
 //
@@ -44,3 +51,28 @@
 //判断是否iPhone X
 
 #define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    float whether = IS_iPhoneX ? 100 : 0;
+    NSLog(@"%lf",whether);
+    
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+@end
