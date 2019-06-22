@@ -42,27 +42,23 @@ static inline BOOL isIPhoneXSeries() {
 
 // status bar height.
 
-#define  kStatusBarHeight      (IS_iPhoneX ? 44.f : 20.f)
+#define  StatusBarHeight      (IS_iPhoneX ? 44.f : 20.f)
 
 // Navigation bar height.
 
-#define  kNavigationBarHeight  44.f
+#define  NavigationBarHeight  44.f
 
 // Tabbar height.
 
-#define  kTabbarHeight        (IS_iPhoneX ? (49.f + 34.f) : 49.f)
+#define  TabbarHeight        (IS_iPhoneX ? (49.f + 34.f) : 49.f)
 
 // Tabbar safe bottom margin.
 
-#define  kTabbarSafeBottomMargin        (IS_iPhoneX ? 34.f : 0.f)
+#define  TabbarSafeBottomMargin        (IS_iPhoneX ? 34.f : 0.f)
 
 // Status bar & navigation bar height.
 
-#define  kStatusBarAndNavigationBarHeight  (IS_iPhoneX ? 88.f : 64.f)
-
-//判断是否iPhone X
-
-#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define  StatusBarAndNavigationBarHeight  (IS_iPhoneX ? 88.f : 64.f)
 
 //判断是否是刘海屏
 #define IPHONE_X \
@@ -79,6 +75,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
 #define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1080, 1920), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define iPhoneXr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
 #define iPhoneXsMax ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 
